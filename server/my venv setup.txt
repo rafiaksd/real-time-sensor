@@ -1,0 +1,27 @@
+put the virtual environment folder 'venv' or 'myvenv' inside the /server
+
+inside the /server, there would be 'myvenv' and 'djangoform_project' folder
+
+inside the 'djangoform_project' folder, would be manage.py & .env
+
+***make sure to create the __init__.py files for /management and /commands (for simulate.py)
+
+*** fix CROSS ORIGIN ERROR
+
+#some Step by Step Instruction to Setup
+
+```django_form\server> myvenv\Scripts\activate
+pip install django djangorestframework pymysql
+django-admin startproject config .
+python manage.py startapp pubsub
+
+python manage.py makemigrations
+python manage.py migrate
+
+python manage.py showmigrations
+python manage.py check
+
+python manage.py makemigrations pubsub
+python manage.py migrate
+
+python manage.py simulate```

@@ -1,0 +1,7 @@
+/server/myvenv/
+/client/node_modules/
+/server/djangoform_project/.env
+
+# Environment files
+.env
+*.env
