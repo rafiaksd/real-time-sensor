@@ -6,7 +6,7 @@ inside the 'djangoform_project' folder, would be manage.py & .env
 
 ***make sure to create the __init__.py files for /management and /commands (for simulate.py)
 
-*** fix CROSS ORIGIN ERROR
+*** fix CROSS ORIGIN ERROR ***
 
 #some Step by Step Instruction to Setup
 
