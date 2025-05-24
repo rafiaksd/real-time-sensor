@@ -5,11 +5,16 @@ from .models import SensorData
 class SensorDataAPI(APIView):
     def get(self, request):
         latest = SensorData.objects.order_by('-created_at')[:10]
-        return Response([
-            {
-                'temperature': d.temperature,
-                'humidity': d.humidity,
-                'timestamp': d.created_at
+        
+        data = []
+
+        for item in latest:
+            entry = { 
+                'temperature': item.temperature, 
+                'humidity': item.humidity, 
+                'timestamp': item.created_at 
             }
-            for d in latest
-        ])
+
+            data.append(entry)
+
+        return Response(data)
